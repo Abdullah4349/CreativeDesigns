@@ -74,7 +74,7 @@ nav ul li a:hover {
 }
 
 .portfolio-item img, .skill-bar, .testimonial p {
-    max-width: 200px;
+    max-width: 20px;
     border-radius: 10px;
 }
 
