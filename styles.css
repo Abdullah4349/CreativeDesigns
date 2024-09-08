@@ -154,7 +154,6 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-    
 }
 
 /* Add this to your styles.css */
@@ -213,4 +212,29 @@ footer {
     margin: 0 auto 20px; /* Center the logo and add some margin */
 }
 
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .portfolio-item, .skill, .testimonial {
+        margin: 10px;
+        padding: 15px;
+    }
+}
 
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
