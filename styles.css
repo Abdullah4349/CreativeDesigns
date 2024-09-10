@@ -14,6 +14,7 @@ header {
     background: #1e1e1e;
     position: relative;
     overflow: hidden;
+    max-width: 100%;
 }
 
 header .container {
@@ -33,6 +34,7 @@ header p {
     animation: fadeInUp 3s ease-in-out;
 }
 
+
 /* Navigation styles */
 nav ul {
     list-style: none;
@@ -44,24 +46,37 @@ nav ul {
 }
 
 nav ul li {
+    background-color: #ff0;
+    border-left: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
     margin: 5px 10px; /* Adjust spacing */
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff0;
+    color: rgb(60, 255, 0);
 }
 
 /* Section styles */
 #portfolio, #skills, #testimonials, #contact {
     padding: 100px 0 0 0; /* Reduced padding for mobile */
 }
+.portfolio-item {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.portfolio-item[style*="display: none"] {
+    opacity: 0;
+}
+
 
 .portfolio-items, .skills-container, .testimonials-container {
     display: flex;
@@ -283,3 +298,4 @@ footer {
         max-width: 100%;
     }
 }
+
