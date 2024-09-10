@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ScrollMagic for scroll-triggered animations
     const controller = new ScrollMagic.Controller();
-    
+
     document.querySelectorAll('.portfolio-item, .skill, .testimonial').forEach((item) => {
         new ScrollMagic.Scene({
             triggerElement: item,
@@ -45,9 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     observer.observe(container, { attributes: true });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    // Search functionality
     document.querySelector('form.search-bar button').addEventListener('click', searchPortfolio);
 
     function searchPortfolio() {
@@ -66,4 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Debugging: Check for disappearing images
+    document.addEventListener('scroll', () => {
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            console.log('Item visibility:', item, 'Visibility:', item.getBoundingClientRect().top);
+        });
+    });
 });
