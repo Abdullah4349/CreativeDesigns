@@ -42,46 +42,48 @@
             <li><a href="https://www.linkedin.com/in/muhammad-abdullah-727a81265/" target="_blank">LinkedIn</a></li>
         </ul>
     </nav>
-    <form class="search-bar" action="/search" method="GET">
-        <input type="text" name="query" placeholder="Search for work..." required>
-        <button type="submit">Search</button>
+    <form class="search-bar" onsubmit="return false;">
+        <input type="text" id="searchInput" placeholder="Search for work..." required>
+        <button type="submit" onclick="searchPortfolio()">Search</button>
     </form>
+
+
     <main>
         <section id="portfolio">
             <h2>My Work</h2>
-            <div class="portfolio-items">
+            <div class="portfolio-items" data-title="Thumbnail Top 5 Adventure Movies">
                 <div class="portfolio-item">
-                    <img src="Projects/Thumbnail 1.jpg" alt="Thumbnail Top 5 Adventure Movies">
+                    <img src="Projects/jpeg-optimizer_Thumbnail 1.jpg" alt="Thumbnail Top 5 Adventure Movies" loading="lazy">
                     <h3>Thumbnail Top 5 Adventure Movies</h3>
                     <a href="Projects/Thumbnail 1.jpg" download>Download</a>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="Projects/Business Card.jpg" alt="Business Card">
+                <div class="portfolio-item" data-title="Business Card">
+                    <img src="Projects/jpeg-optimizer_Business Card.jpg" alt="Business Card" loading="lazy">
                     <h3>Business Card</h3>
                     <a href="Projects/Business Card.jpg" download>Download</a>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="Projects/Business Card 1.jpg" alt="Business Card 1">
+                <div class="portfolio-item" data-title="Business Card 1">
+                    <img src="Projects/jpeg-optimizer_Business Card 1.jpg" alt="Business Card 1" loading="lazy">
                     <h3>Business Card 1</h3>
                     <a href="Projects/Business Card 1.jpg" download>Download</a>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="Projects/Logo 1.jpg" alt="Logo 1">
+                <div class="portfolio-item" data-title="Logo 1">
+                    <img src="Projects/jpeg-optimizer_Logo 1.jpg" alt="Logo 1" loading="lazy">
                     <h3>Logo 1</h3>
                     <a href="Projects/Logos.jpg" download>Download</a>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="Projects/Advertisement card.jpg" alt="Advertisement Card">
+                <div class="portfolio-item" data-title="Advertisement Card">
+                    <img src="Projects/jpeg-optimizer_Advertisement card.jpg" alt="Advertisement Card" loading="lazy">
                     <h3>Advertisement Card</h3>
                     <a href="Projects/Advertisement card.jpg" download>Download</a>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="Projects/Logos.jpg" alt="Logo">
+                <div class="portfolio-item" data-title="Logo">
+                    <img src="Projects/jpeg-optimizer_Logos.jpg" alt="Logo" loading="lazy">
                     <h3>Logo</h3>
                     <a href="Projects/Logos.jpg" download>Download</a>
                 </div>
@@ -137,6 +139,8 @@
     <footer>
         <p>© 2024 Creative Designs. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
+
 </body>
 </html>
