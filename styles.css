@@ -1,4 +1,4 @@
-/* styles.css */
+/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,6 +8,7 @@ body {
     text-align: center;
 }
 
+/* Header styles */
 header {
     padding: 100px 0;
     background: #1e1e1e;
@@ -32,6 +33,7 @@ header p {
     animation: fadeInUp 3s ease-in-out;
 }
 
+/* Navigation styles */
 nav ul {
     list-style: none;
     padding: 0;
@@ -55,6 +57,7 @@ nav ul li a:hover {
     color: #ff0;
 }
 
+/* Section styles */
 #portfolio, #skills, #testimonials, #contact {
     padding: 200px 0 0 0;
 }
@@ -63,7 +66,7 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+} 
 
 .portfolio-item, .skill, .testimonial {
     margin: 15px;
@@ -166,7 +169,7 @@ footer {
 
 .search-bar input {
     padding: 10px;
-    width: 800px;
+    max-width: 100%;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
@@ -180,7 +183,7 @@ footer {
     border: 1px solid #ccc;
     background-color: #ff0;
     color: #121212;
-    border-radius: 5px 5px 50px 50px;
+    border-radius: 5px 5px 0 0;
     cursor: pointer;
 }
 
@@ -224,6 +227,38 @@ footer {
         margin: 10px;
         padding: 15px;
     }
+
+    /* Ensure portfolio, skills, and testimonials stack properly */
+    .portfolio-items, .skills-container, .testimonials-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Ensure individual items adjust well */
+    .portfolio-item, .skill, .testimonial {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Adjust the search bar for smaller screens */
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%; /* Stack input and button */
+        margin-bottom: 10px; /* Add some spacing */
+    }
+
+    /* Ensure the navigation menu works well */
+    nav ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
 }
 
 /* Responsive images */
@@ -232,9 +267,14 @@ img {
     height: auto;
 }
 
-/* CSS reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Images and Logos */
+@media (max-width: 600px) {
+    .logo {
+        width: 100px; /* Adjust size for mobile */
+    }
+
+    img {
+        max-width: 100%;
+        height: auto; /* Ensure images scale properly */
+    }
 }
