@@ -1,4 +1,4 @@
-/* styles.css */
+/* General styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -8,11 +8,13 @@ body {
     text-align: center;
 }
 
+/* Header styles */
 header {
-    padding: 100px 0;
+    padding: 50px 0; /* Adjusted padding for mobile */
     background: #1e1e1e;
     position: relative;
     overflow: hidden;
+    max-width: 100%;
 }
 
 header .container {
@@ -21,49 +23,62 @@ header .container {
 }
 
 header h1 {
-    font-size: 4em;
+    font-size: 3em; /* Slightly smaller font size for better mobile view */
     margin: 0;
     animation: fadeInDown 3s ease-in-out;
 }
 
 header p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin: 10px 0 0;
     animation: fadeInUp 3s ease-in-out;
 }
 
+
+/* Navigation styles */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 20px 0;
     display: flex;
+    flex-wrap: wrap; /* Ensure flex-wrap for responsiveness */
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    background-color: #ff0;
+    border-left: 5px solid rgb(255, 255, 255);
+    border-right: 5px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 5px 10px; /* Adjust spacing */
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff0;
+    color: rgb(60, 255, 0);
 }
 
+/* Section styles */
 #portfolio, #skills, #testimonials, #contact {
-    padding: 200px 0 0 0;
+    padding: 100px 0 0 0; /* Reduced padding for mobile */
 }
+.portfolio-item {
+    opacity: 1;
+}
+
 
 .portfolio-items, .skills-container, .testimonials-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+} 
 
 .portfolio-item, .skill, .testimonial {
     margin: 15px;
@@ -74,7 +89,7 @@ nav ul li a:hover {
 }
 
 .portfolio-item img, .skill-bar, .testimonial p {
-    max-width: 500px;
+    max-width: 100%; /* Ensure images scale properly */
     border-radius: 10px;
 }
 
@@ -108,7 +123,7 @@ form {
 }
 
 form input, form textarea {
-    width: 80%;
+    width: 100%; /* Full width on mobile */
     padding: 10px;
     margin: 10px 0;
     border: none;
@@ -156,31 +171,31 @@ footer {
     }
 }
 
-/* Add this to your styles.css */
+/* Search Bar */
 .search-bar {
     display: flex;
+    flex-direction: column; /* Stack elements for mobile */
     justify-content: center;
-    margin: 1px 0;
+    margin: 10px 0;
     animation: fadeInUp 3s ease-in-out;
 }
 
 .search-bar input {
     padding: 10px;
-    width: 800px;
     font-size: 1em;
     border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
     outline: none;
+    margin-bottom: 10px; /* Add spacing */
 }
 
 .search-bar button {
     padding: 10px;
-    width: 100px;
     font-size: 1em;
     border: 1px solid #ccc;
     background-color: #ff0;
     color: #121212;
-    border-radius: 5px 5px 50px 50px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -188,7 +203,7 @@ footer {
     background-color: #e6e600;
 }
 
-/* Add this to your styles.css */
+/* Portfolio Item Links */
 .portfolio-item a {
     display: inline-block;
     margin-top: 10px;
@@ -204,7 +219,7 @@ footer {
     background-color: #e6e600;
 }
 
-/* styles.css */
+/* Logo */
 .logo {
     width: 150px; /* Adjust the size as needed */
     height: auto;
@@ -220,21 +235,66 @@ footer {
     header p {
         font-size: 1em;
     }
+
     .portfolio-item, .skill, .testimonial {
         margin: 10px;
         padding: 15px;
+        width: 100%; /* Ensure full width on mobile */
+    }
+
+    /* Ensure portfolio, skills, and testimonials stack properly */
+    .portfolio-items, .skills-container, .testimonials-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Adjust the navigation menu for mobile */
+    nav ul {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+/* Container holding the portfolio images */
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Each portfolio item (image) */
+.portfolio-item {
+    flex: 1 1 calc(33.33% - 30px); /* 3 images per row with spacing */
+    margin: 15px;
+    max-width: calc(33.33% - 30px); /* Ensures 3 items per row */
+}
+
+.portfolio-item img {
+    width: 100%; /* Make sure images are responsive */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* For screens smaller than 768px (tablets and mobile devices) */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 calc(50% - 20px); /* 2 images per row for smaller screens */
+        max-width: calc(50% - 20px); /* Adjust for smaller screens */
     }
 }
 
-/* Responsive images */
-img {
-    max-width: 100%;
-    height: auto;
+/* For screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    .portfolio-item {
+        flex: 1 1 100%; /* 1 image per row for very small screens */
+        max-width: 100%;
+    }
+}
+.portfolio-item {
+    opacity: 1;
 }
 
-/* CSS reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
