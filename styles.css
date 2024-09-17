@@ -68,6 +68,7 @@ nav ul li a:hover {
 /* Section styles */
 #portfolio, #skills, #testimonials, #contact {
     padding: 100px 0 0 0; /* Reduced padding for mobile */
+    margin: 0%;
 }
 .portfolio-item {
     opacity: 1;
@@ -78,6 +79,7 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0%;
 } 
 
 .portfolio-item, .skill, .testimonial {
@@ -171,37 +173,6 @@ footer {
     }
 }
 
-/* Search Bar */
-.search-bar {
-    display: flex;
-    flex-direction: column; /* Stack elements for mobile */
-    justify-content: center;
-    margin: 10px 0;
-    animation: fadeInUp 3s ease-in-out;
-}
-
-.search-bar input {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    margin-bottom: 10px; /* Add spacing */
-}
-
-.search-bar button {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    background-color: #ff0;
-    color: #121212;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #e6e600;
-}
 
 /* Portfolio Item Links */
 .portfolio-item a {
@@ -297,4 +268,5 @@ footer {
 .portfolio-item {
     opacity: 1;
 }
+
 
